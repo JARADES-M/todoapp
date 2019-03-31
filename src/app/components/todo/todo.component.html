@@ -1,0 +1,8 @@
+<h1>My Todos</h1>
+<ul>
+  <li *ngFor="let todo of todos" class="list-group-item">
+    Ação: {{todo.action}} :::: Data Alvo: {{todo.dueDate | date}} :::: Status: {{todo.status}}
+  </li>
+</ul>
+<app-add-item *ngIf="additem"></app-add-item>
+<button (click)="addItem()"> {{action}} </button>
